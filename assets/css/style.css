@@ -30,29 +30,54 @@ html {
   background-color: #000;
 }
 
-#nav {
+#nav,
+.sub-nav {
+  list-style: none;
 }
 
-#nav li {
+#nav > li {
   display: inline-block;
+  position: relative;
+}
+
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 46px;
 }
 
 #nav li a {
-  display: inline-block;
-  line-height: 46px;
+  display: block;
   padding: 0 24px;
-
   text-decoration: none;
-  color: #fff;
 }
 
-#nav li:hover a {
+#nav > li:hover > a,
+#nav .sub-nav > li:hover > a {
   color: #000;
   background-color: #ccc;
 }
 
 #nav .sub-nav {
   display: none;
+  min-width: 160px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .sub-nav a {
+  color: #000;
+  padding: 0 12px;
+  line-height: 36px;
+}
+
+#nav li:hover > .sub-nav {
+  display: block;
 }
 
 #slider {
