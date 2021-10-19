@@ -26,7 +26,13 @@ html {
 }
 
 #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 46px;
+  z-index: 1;
+
   background-color: #000;
 }
 
@@ -101,6 +107,35 @@ html {
 }
 
 #slider {
+  position: relative;
+  margin-top: 46px;
+  /* Height = 50% width */
+  padding-top: 50%;
+  background: url("/assets/img/slider/slider1.jpg") top center/ cover no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  width: 100%;
+
+  /* Options */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  /* left: 0;
+  right: 0; */
+
+  color: #fff;
+  text-align: center;
+}
+
+#slider .text-heading {
+  font-weight: 500;
+  font-size: 24px;
+}
+#slider .text-description {
+  font-size: 15px;
+  margin-top: 25px;
 }
 
 #content {
