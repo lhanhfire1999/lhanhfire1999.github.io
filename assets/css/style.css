@@ -228,5 +228,52 @@ html {
   text-align: center;
   line-height: 24px;
 }
+
+#content .places-list {
+  margin: 32px -8px 48px;
+}
+#content .place-item {
+  /* background-color: #fff; */
+  float: left;
+  width: calc(100% / 3);
+  padding: 0 8px;
+}
+.place-img {
+  display: block;
+  width: 100%;
+}
+.place-img:hover {
+  opacity: 0.6;
+}
+.place-body {
+  background-color: #fff;
+  padding: 16px;
+  font-size: 15px;
+}
+.place-heading {
+  font-size: 15px;
+  font-weight: 600;
+}
+.place-time {
+  margin-top: 15px;
+  color: #757575;
+}
+.place-desc {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+.place-buy-btn {
+  display: inline-block;
+  padding: 11px 16px;
+  margin-top: 15px;
+
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+.place-buy-btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
 #footer {
 }
