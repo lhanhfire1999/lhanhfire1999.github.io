@@ -72,6 +72,27 @@ html {
   width: 100%;
 }
 
+.btn {
+  display: inline-block;
+  padding: 11px 16px;
+  margin-top: 15px;
+
+  border: none;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+.btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+.pull-right {
+  float: right;
+}
+
 /*  */
 
 #main {
@@ -193,7 +214,7 @@ html {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0px;
+  padding: 64px 0px 112px;
 }
 
 #content .section-heading {
@@ -213,7 +234,7 @@ html {
 #content .about-text {
   margin-top: 25px;
   text-align: justify;
-  /*  line-height: 1.4 for Vietnamese*/
+  /*  line-height: 1.6 for Vietnamese*/
   line-height: 1.4;
   font-size: 15px;
 }
@@ -266,7 +287,6 @@ html {
 /* PLACE */
 #content .places-list {
   margin-top: 32px;
-  margin-bottom: 48px;
 }
 
 .place-img {
@@ -292,20 +312,6 @@ html {
 .place-desc {
   margin-top: 15px;
   line-height: 1.4;
-}
-.place-buy-btn {
-  display: inline-block;
-  padding: 11px 16px;
-  margin-top: 15px;
-
-  color: #fff;
-  background-color: #000;
-  /* text-decoration: none; */
-  border: none;
-}
-.place-buy-btn:hover {
-  color: #000;
-  background-color: #ccc;
 }
 
 /* CONTACT */
@@ -334,17 +340,38 @@ html {
   outline: none;
 }
 
-.contact-form .form-submit-btn {
-  float: right;
-  padding: 10px 16px;
-  border: 1px solid #000;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-}
-#footer {
+/* Map Section */
+
+.map-section > img {
+  width: 100%;
 }
 
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .social-list {
+  font-size: 24px;
+}
+#footer .social-list a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+#footer .social-list a:hover,
+#footer .copyright > a:hover {
+  opacity: 0.4;
+}
+#footer .copyright {
+  margin-top: 16px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#footer .copyright > a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* modal */
 .modal {
   position: fixed;
   top: 0;
