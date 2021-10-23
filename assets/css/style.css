@@ -10,21 +10,29 @@ html {
 }
 
 /*
-  1. From the outside to the inside
-  2. From up to down
-  3. From general to detail
- */
+1. From the outside to the inside
+2. From up to down
+3. From general to detail
+*/
 
 /*
-  1. Position
-  2. Size
-  3. Color
-  4. Shape ( font type, circal, square, ...)
- */
+1. Position
+2. Size
+3. Color
+4. Shape ( font type, circal, square, ...)
+*/
 
 /* Common */
 .clear {
   clear: both;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
 }
 
 .text-white {
@@ -40,14 +48,28 @@ html {
   margin-right: -8px;
 }
 
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .col {
   float: left;
   padding-left: 8px;
   padding-right: 8px;
 }
 
+.col-half {
+  width: 50%;
+}
+
 .col-third {
   width: calc(100% / 3);
+}
+
+.col-full {
+  width: 100%;
 }
 
 /*  */
@@ -139,8 +161,7 @@ html {
 #slider {
   position: relative;
   margin-top: 46px;
-  /* Height = 50% width */
-  padding-top: 50%;
+  padding-top: 50%; /* Height = 50% width */
   background: url("/assets/img/slider/slider1.jpg") top center/ cover no-repeat;
 }
 
@@ -148,13 +169,11 @@ html {
   position: absolute;
   bottom: 47px;
   width: 100%;
-
   /* Options */
   /* left: 50%;
   transform: translateX(-50%); */
   /* left: 0;
   right: 0; */
-
   color: #fff;
   text-align: center;
 }
@@ -287,6 +306,41 @@ html {
 .place-buy-btn:hover {
   color: #000;
   background-color: #ccc;
+}
+
+/* CONTACT */
+.contact-section {
+  margin-top: 32px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+  height: 30px;
+  display: inline-block;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  outline: none;
+}
+
+.contact-form .form-submit-btn {
+  float: right;
+  padding: 10px 16px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
 }
 #footer {
 }
