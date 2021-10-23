@@ -269,7 +269,8 @@ html {
 
   color: #fff;
   background-color: #000;
-  text-decoration: none;
+  /* text-decoration: none; */
+  border: none;
 }
 .place-buy-btn:hover {
   color: #000;
@@ -302,6 +303,7 @@ html {
   max-width: calc(100% - 32px);
   min-height: 200px;
   background: #fff;
+  animation: modalAnimation ease 0.5s;
 }
 
 .modal .modal-close {
@@ -370,4 +372,15 @@ html {
 
 .modal-footer a {
   color: #2196f3;
+}
+
+@keyframes modalAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
