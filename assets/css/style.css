@@ -277,3 +277,97 @@ html {
 }
 #footer {
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  width: 900px;
+  max-width: calc(100% - 32px);
+  min-height: 200px;
+  background: #fff;
+}
+
+.modal .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal .modal-close:hover {
+  background: #ccc;
+  color: #000;
+}
+.modal .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 128px;
+
+  color: #fff;
+  font-size: 30px;
+  background: #009688;
+}
+
+.modal-heading-icon {
+  margin-right: 16px;
+}
+
+.modal .modal-body {
+  padding: 16px;
+}
+.modal .modal-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.modal .modal-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 24px;
+  border: 1px solid #ccc;
+}
+
+#buy-tickets:hover {
+  opacity: 0.9;
+  color: #000;
+}
+#buy-tickets {
+  width: 100%;
+  padding: 15px;
+  border: none;
+
+  font-size: 15px;
+  color: #fff;
+  background: #009688;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.modal .modal-footer {
+  padding: 16px;
+  text-align: right;
+}
+
+.modal-footer a {
+  color: #2196f3;
+}
