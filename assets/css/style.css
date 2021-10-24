@@ -213,9 +213,12 @@ html {
 }
 #content .content-section {
   width: 800px;
+  max-width: 100%;
+  padding: 64px 0px 112px;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0px 112px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #content .section-heading {
@@ -477,4 +480,12 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Mobile */
+@media (max-width: 739px) {
 }
