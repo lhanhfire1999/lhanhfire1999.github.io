@@ -7,19 +7,20 @@
   <title>The Band</title>
   <link rel="icon" href="https://icons-for-free.com/iconfiles/png/512/music+icon-1320184414432119131.png" type="image/x-icon" />
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
   <div id="main">
     <div id="header">
       <!-- Begin Nav -->
-      <ul id="nav">
+      <ul id="nav" class="js-nav">
         <li><a href="#">Home</a></li>
         <li><a href="#band">Band</a></li>
         <li><a href="#tour">Tour</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="">
+          <a href="#">
             More
             <i class="nav-arrow-down ti-angle-down"></i>
           </a>
@@ -37,6 +38,10 @@
         <i class="search-icon ti-search"></i>
       </div>
       <!-- End Search button -->
+
+      <div class="mobile-menu-btn js-mobile-menu-btn">
+        <i class="menu-icon ti-menu"></i>
+      </div>
 
 
     </div>
@@ -226,6 +231,36 @@
     modalContainer.addEventListener('click', (event)=>{
       event.stopPropagation();
     });
+
+  </script>
+
+  <script>
+    const header = document.querySelector('#header');
+    const mobileMenu = document.querySelector('.js-mobile-menu-btn');
+    const currentHeaderHeight = header.clientHeight;
+
+    // Handle open/close menu when click menu-icon
+    mobileMenu.addEventListener('click', ()=>{
+      let isClose = header.clientHeight === currentHeaderHeight;
+
+      if(isClose){
+        header.style.height = 'auto';
+      }
+      else{
+        header.style.height = null
+      }
+    })
+
+    // Handle open/close menu when click itemInMenu
+
+    const menuItems = document.querySelectorAll(`.js-nav li a[href*='#']`);
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', ()=> {
+        header.style.height = null;
+      })
+    })
+
 
   </script>
 </body>
