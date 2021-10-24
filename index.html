@@ -37,7 +37,7 @@
       <div class="mobile-menu-btn js-mobile-menu-btn">
         <i class="menu-icon ti-menu"></i>
       </div>
-      
+
       <!-- Search button -->
       <div class="search-btn">
         <i class="search-icon ti-search"></i>
@@ -257,8 +257,14 @@
     const menuItems = document.querySelectorAll(`.js-nav li a[href*='#']`);
 
     menuItems.forEach(item => {
-      item.addEventListener('click', ()=> {
-        header.style.height = null;
+      item.addEventListener('click', function (e) {
+        // console.log(this.nextElementSibling.classList.contains('sub-nav'));
+        const isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav');
+        if(isParentMenu){
+          e.preventDefault();
+        }else{
+          header.style.height = null;
+        }
       })
     })
 

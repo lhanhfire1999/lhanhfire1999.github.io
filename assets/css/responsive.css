@@ -11,6 +11,16 @@
 
 /* Mobile */
 @media (max-width: 739px) {
+  #header {
+    overflow: hidden;
+  }
+  #header .mobile-menu-btn {
+    display: inline-block;
+  }
+  #header .search-btn {
+    display: none;
+  }
+
   #nav {
     display: block;
   }
@@ -18,15 +28,18 @@
     display: block;
   }
 
+  #nav > li a {
+    padding: 1px 24px;
+  }
   #nav > li:first-child {
     display: inline-block;
   }
-
-  #header .mobile-menu-btn {
-    display: inline-block;
+  #nav .sub-nav {
+    position: initial;
+    background: #333;
   }
-
-  #header .search-btn {
-    display: none;
+  #nav .sub-nav a {
+    color: #fff;
+    padding: 5px 41px;
   }
 }
