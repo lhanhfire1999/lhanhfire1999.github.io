@@ -260,7 +260,7 @@ html {
   font-size: 15px;
 }
 #content .members-list {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 #content .member-name {
   font-size: 15px;
@@ -307,7 +307,7 @@ html {
 
 /* PLACE */
 #content .places-list {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-img {
