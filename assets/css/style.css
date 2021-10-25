@@ -88,6 +88,8 @@ html {
 
   text-align: center;
   text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
 
   cursor: pointer;
 }
